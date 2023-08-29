@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <SoundDef>
+        <defName>Hellcannon_Fire</defName>  
+        <context>MapOnly</context>
+        <priorityMode>PrioritizeNewest</priorityMode>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Hellcannon/Shot</clipPath>
+                    </li>
+                </grains>
+                <sustainLoop>False</sustainLoop>
+                <volumeRange>140~150</volumeRange>
+                <pitchRange>0.90~1.00</pitchRange>
+            </li>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Hellcannon/Tail</clipPath>
+                    </li>
+                </grains>
+                <sustainLoop>False</sustainLoop>
+                <volumeRange>40~40</volumeRange>
+                <pitchRange>1.00~1.00</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Hellcannon_Tail</defName>  
+        <context>MapOnly</context>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <onCamera>True</onCamera>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Hellcannon/Tail</clipPath>
+                    </li>
+                </grains>
+                <sustainLoop>False</sustainLoop>
+                <volumeRange>20~25</volumeRange>
+                <pitchRange>1.00~1.00</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Hellcannon_Reload</defName>  
+        <context>MapOnly</context>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Hellcannon/Reload</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>10~10</volumeRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Hellcannon_Incoming</defName>  
+        <context>MapOnly</context>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Hellcannon/Preimpact</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>30~40</volumeRange>
+                <sustainLoop>False</sustainLoop>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Hellcannon_Ambient</defName>
+        <sustain>true</sustain>
+        <context>MapOnly</context>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Hellcannon/Ambient</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>15~20</volumeRange>
+                <sustainLoop>true</sustainLoop>
+                <muteWhenPaused>True</muteWhenPaused>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>Hellcannon_Explosion</defName>  
+        <context>MapOnly</context>
+        <priorityMode>PrioritizeNewest</priorityMode>
+        <maxVoices>8</maxVoices>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Hellcannon/Explosion/Close</clipPath>
+                    </li>
+                </grains>
+                <sustainLoop>False</sustainLoop>
+            </li>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Hellcannon/Explosion/Debris</clipPath>
+                    </li>
+                </grains>
+                <sustainLoop>False</sustainLoop>
+            </li>
+            <li>
+                <onCamera>True</onCamera>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipPath>Hellcannon/Explosion/Far</clipPath>
+                    </li>
+                </grains>
+                <sustainLoop>False</sustainLoop>
+                <volumeRange>25~30</volumeRange>
+                <pitchRange>1.00~1.00</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+</Defs>

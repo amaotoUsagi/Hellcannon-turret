@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseArtilleryBuilding">
+    <defName>Turret_Hellcannon_Base</defName>
+    <label>Hellcannon</label>
+    <description>A mortar-like improvised firearm known for its simplicity and inaccuracy.</description>
+    <thingClass>BillDoorsFramework.Building_TurretMultiCE</thingClass>
+    <uiIconPath>Things/Building/Hellcannon/Hellcannon_Icon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Hellcannon/Hellcannon_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToBuild>10300</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.4</Flammability>
+      <Mass>378</Mass>
+      <Bulk>740</Bulk>
+    </statBases>
+    <costList>
+     <Steel>175</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <tradeTags>
+      <li>CE_Turret</li>
+    </tradeTags>
+    <size>(2,2)</size>
+    <interactionCellOffset>(1,0,-1)</interactionCellOffset>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <rotatable>true</rotatable>
+    <stuffCategories Inherit="False"/>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_Hellcannon_Turret</turretGunDef>
+      <turretTopDrawSize>4</turretTopDrawSize>
+      <turretBurstCooldownTime>2.6</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites Inherit="False">
+      <li>IEDs</li>
+    </researchPrerequisites>
+    <modExtensions>
+      <li Class="BillDoorsFramework.ModExtension_Building_TurretMulti">
+        <graphicDatas>
+          <li>
+            <fuelPercent>999</fuelPercent>
+            <graphicData>
+              <texPath>Things/Building/Hellcannon/Hellcannon_Turret_Loaded</texPath>
+            </graphicData>
+          </li>
+          <li>
+            <fuelPercent>0</fuelPercent>
+            <graphicData>
+              <texPath>Things/Building/Hellcannon/Hellcannon_Turret_Empty</texPath>
+            </graphicData>
+          </li>
+        </graphicDatas>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>Gun_Hellcannon_Turret</defName>
+    <label>Hellcannon turret</label>
+    <graphicData>
+      <texPath>Things/Building/Hellcannon/Hellcannon_Turret_Loaded</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>May your enemies find peace.</description>
+    <statBases>
+      <SightsEfficiency>0.5</SightsEfficiency>
+      <RangedWeapon_Cooldown>2.6</RangedWeapon_Cooldown>
+      <Mass>378</Mass>
+    </statBases>
+    <weaponTags>
+      <li>TurretGun</li>
+      <li>Artillery_BaseDestroyer</li>
+    </weaponTags>
+    <soundInteract>Hellcannon_Reload</soundInteract>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <verbClass>CombatExtended.Verb_ShootMortarCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Hellcannon_HE</defaultProjectile>
+        <requireLineOfSight>false</requireLineOfSight>
+        <warmupTime>4.2</warmupTime>
+        <minRange>25</minRange>
+        <range>112</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <soundCast>Hellcannon_Fire</soundCast>
+        <soundCastTail>Hellcannon_Tail</soundCastTail>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <indirectFirePenalty>0.4</indirectFirePenalty>
+        <circularError>1</circularError>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <reloadTime>9.8</reloadTime>
+        <ammoSet>AmmoSet_Hellcannon</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_Charges">
+        <chargeSpeeds>
+          <li>30</li>
+          <li>31</li>
+          <li>32</li>
+          <li>33</li>
+          <li>34</li>
+          <li>35</li>
+        </chargeSpeeds>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>
